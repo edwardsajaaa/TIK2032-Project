@@ -1,0 +1,243 @@
+* {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fdfdfd;
+    color: #333;
+}
+.main-header {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: 800;
+    color: #333;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    opacity: 0; /* Start hidden */
+    animation: fadeInNav 1s forwards; /* Apply fade-in animation */
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #ff758c;
+}
+
+/* Fade-in Animation for Navigation */
+@keyframes fadeInNav {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Move up from below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Position normal */
+    }
+}
+
+/* Gallery Section */
+#gallery {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#gallery h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Grid Layout for Images */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 foto per baris */
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Animasi gambar (dengan variasi animasi) */
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: scale(0.8); /* Start kecil untuk zoom-in effect */
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+    animation: zoomIn 0.8s ease forwards, slideUp 0.8s ease forwards;
+}
+
+/* Zoom In Animation */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8); /* Image mulai kecil */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /* Image menjadi normal */
+    }
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slide dari bawah */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Posisi akhir */
+    }
+}
+
+/* Hover Effect */
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: #121212;
+    color: #f1f1f1;
+}
+
+body.dark-mode .main-header {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode h1 {
+    color: #fff;
+}
+
+body.dark-mode nav ul li a {
+    color: #ccc;
+}
+
+body.dark-mode nav ul li a:hover,
+body.dark-mode nav ul li a.active {
+    color: #ffb6c1;
+}
+
+body.dark-mode #gallery h2 {
+    color: #ffb6c1;
+}
+
+body.dark-mode .gallery-grid img {
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .gallery-grid img:hover {
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 foto per baris di tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 foto per baris di smartphone */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* 1 foto per baris di layar sangat kecil */
+    }
+}
+
+/* Dark Mode Toggle */
+.dark-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.dark-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+.gallery-item {
+    position: relative;
+    width: 100%;
+  }
+  
+  .gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Tombol download per gambar */
+  .download-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.85);
+    color: #333;
+    padding: 6px 10px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  
+  .gallery-item:hover .download-btn {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  
+  body.dark-mode .download-btn {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+  }
+  

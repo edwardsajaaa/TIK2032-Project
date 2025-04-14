@@ -1,0 +1,241 @@
+* {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfdfd;
+    color: #333;
+}
+
+/* ===== Header Section ===== */
+.main-header {
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    margin-bottom: 40px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.logo .dot {
+    color: #ff758c;
+}
+
+.tagline {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666;
+    margin-top: 5px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #ff758c;
+}
+
+/* ===== Blog Section ===== */
+#blog {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#blog h2 {
+    font-size: 2.5rem;
+    color: #ff758c;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Article Post Styling */
+.blog-post {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.blog-post h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.blog-post p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.blog-post a {
+    font-weight: bold;
+    color: #ff758c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.blog-post a:hover {
+    color: #d15167;
+}
+
+/* Hover Effect for Article Post */
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Animation ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.fade-delay-1 { animation-delay: 0.2s; }
+.fade-delay-2 { animation-delay: 0.4s; }
+.fade-delay-3 { animation-delay: 0.6s; }
+.fade-delay-4 { animation-delay: 0.8s; }
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    #blog h2 {
+        font-size: 2rem;
+    }
+
+    .blog-post {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #blog h2 {
+        font-size: 1.8rem;
+    }
+
+    .blog-post h3 {
+        font-size: 1.8rem;
+    }
+
+    .blog-post p {
+        font-size: 1rem;
+    }
+
+    .blog-post {
+        padding: 10px;
+    }
+}
+
+/* ===== DARK MODE STYLING ===== */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+  }
+  
+  body.dark-mode .main-header {
+    background-color: #2c2c2c;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+  }
+  
+  body.dark-mode .logo h1,
+  body.dark-mode .blog-post h3 {
+    color: #f1f1f1;
+  }
+  
+  body.dark-mode .tagline,
+  body.dark-mode .nav-links li a {
+    color: #ccc;
+  }
+  
+  body.dark-mode .nav-links li a.active {
+    color: #ffb3c1;
+  }
+  
+  body.dark-mode .blog-post {
+    background-color: #2c2c2c;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+  }
+  
+  body.dark-mode .blog-post a {
+    color: #ffb3c1;
+  }
+  
+  /* Dark Mode Toggle */
+.dark-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.dark-toggle:hover {
+    transform: scale(1.1);
+}
+

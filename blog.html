@@ -1,53 +1,58 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog</title>
+  <link rel="stylesheet" href="blog.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <h1>Blog</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="blog">
-            <h2>Artikel Terbaru</h2>
-            
-            <article>
-                <h3>Teknologi AI dan Masa Depan</h3>
-                    <div>
-                         <img src="Blog/wire_feature_ai-concept_1010x568.jpg" alt="Foto 1" width="300">
-                    <div>
-                <p>Artificial Intelligence (AI) semakin berkembang dan mengubah cara kita bekerja serta berinteraksi dengan teknologi</p>
-                <a href="#">Baca selengkapnya</a>
-            </article>
-            
-            <article>
-                <h3>Eksplorasi Seni Digital</h3>
-                    <div>
-                         <img src="Blog/illustrators-tools-arrangement-still-life-1.jpg" alt="Foto 2" width="300">
-                    <div>
-                <p>Seni digital telah membuka peluang baru bagi seniman untuk mengekspresikan kreativitas mereka menggunakan teknologi</p>
-                <a href="#">Baca selengkapnya</a>
-            </article>
-            
-            <article>
-                <h3>Manfaat Olahraga untuk Kesehatan Mental</h3>
-                    <div>
-                        <img src="Blog/Manfaat-pemanasan-1200x800.jpg" alt="Foto 2" width="300">
-                    <div>
-                <p>Olahraga bukan hanya bermanfaat untuk kebugaran fisik, tetapi juga dapat meningkatkan kesehatan mental...</p>
-                <a href="#">Baca selengkapnya</a>
-            </article>
-        </section>
-    </main>
+  <!-- Header -->
+  <header class="main-header fade-in fade-delay-1">
+    <div class="container">
+      <button id="dark-mode-toggle" class="dark-toggle">🌙</button>
+      <div class="logo">
+        <h1>Edward<span class="dot">.</span></h1>
+        <p class="tagline">Developer | Maker | Mahasiswa</p>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="blog">
+      <h2>Artikel Terbaru</h2>
+
+      <article class="blog-post">
+        <h3>Teknologi AI dan Masa Depan</h3>
+        <div><img src="Blog/wire_feature_ai-concept_1010x568.jpg" alt="AI" /></div>
+        <p>Artificial Intelligence (AI) semakin berkembang dan mengubah cara kita bekerja serta berinteraksi dengan teknologi.</p>
+        <a href="#">Baca selengkapnya</a>
+      </article>
+
+      <article class="blog-post">
+        <h3>Eksplorasi Seni Digital</h3>
+        <div><img src="Blog/illustrators-tools-arrangement-still-life-1.jpg" alt="Seni" /></div>
+        <p>Seni digital membuka peluang baru bagi seniman untuk mengekspresikan kreativitas menggunakan teknologi.</p>
+        <a href="#">Baca selengkapnya</a>
+      </article>
+
+      <article class="blog-post">
+        <h3>Manfaat Olahraga untuk Kesehatan Mental</h3>
+        <div><img src="Blog/Manfaat-pemanasan-1200x800.jpg" alt="Olahraga" /></div>
+        <p>Olahraga tidak hanya bermanfaat untuk tubuh, tetapi juga sangat baik untuk kesehatan mental.</p>
+        <a href="#">Baca selengkapnya</a>
+      </article>
+    </section>
+  </main>
+  <script src="theme.js"></script>
 </body>
 </html>

@@ -1,36 +1,161 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery</title>
+  <link rel="stylesheet" href="gallery.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .download-btn {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .download-btn img {
+      width: 28px;
+      height: 28px;
+      filter: drop-shadow(0 0 3px black);
+      transition: transform 0.2s ease;
+    }
+
+    .download-btn:hover img {
+      transform: scale(1.15);
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Gallery</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="gallery">
-            <h2>Kumpulan Foto</h2>
-            <div>
-                <img src="Images/WhatsApp Image 2025-03-08 at 16.01.48_6d88cf61.jpg" alt="Foto 1" width="300">
-                <img src="Images/WhatsApp Image 2025-03-08 at 16.01.47_97460bdf.jpg" alt="Foto 2" width="300">
-                <img src="Images/WhatsApp Image 2025-03-08 at 16.01.48_515fd6e9.jpg" alt="Foto 3" width="300">
-                <img src="Images/WhatsApp Image 2025-03-08 at 16.01.48_7bd8408b.jpg" alt="Foto 4" width="300">
-                <img src="Images/WhatsApp Image 2025-03-08 at 16.01.48_a836604f.jpg" alt="Foto 5" width="300">
-                <img src="Images/WhatsApp Image 2025-03-08 at 16.01.49_5faffb8e.jpg" alt="Foto 6" width="300">
-                <img src="Images/WhatsApp Image 2025-03-08 at 16.20.23_bc2175c9.jpg" alt="Foto 7" width="300">
-                <img src="Images/WhatsApp Image 2025-03-08 at 16.01.41_a14cf88d.jpg" alt="Foto 8" width="300">
-            </div>
-        </section>
-    </main>
+  <header class="main-header fade-in fade-delay-1">
+    <div class="container">
+      <button id="dark-mode-toggle" class="dark-toggle">🌙</button>
+      <div class="logo">
+        <h1>Edward<span class="dot">.</span></h1>
+        <p class="tagline">Developer | Maker | Mahasiswa</p>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="gallery">
+      <h2>Kumpulan Foto</h2>
+      <div class="gallery-grid">
+        <!-- Ulangi elemen ini untuk setiap gambar -->
+        <div class="gallery-item">
+          <img src="Images/WhatsApp Image 2025-03-08 at 16.01.48_6d88cf61.jpg" alt="Foto 1">
+          <a href="Images/WhatsApp Image 2025-03-08 at 16.01.48_6d88cf61.jpg" download class="download-btn">
+            <img src="images/123.png" alt="Download">
+          </a>
+        </div>
+        <div class="gallery-item">
+          <img src="Images/WhatsApp Image 2025-03-08 at 16.01.47_97460bdf.jpg" alt="Foto 2">
+          <a href="Images/WhatsApp Image 2025-03-08 at 16.01.47_97460bdf.jpg" download class="download-btn">
+            <img src="images/123.png" alt="Download">
+          </a>
+        </div>
+        <div class="gallery-item">
+          <img src="Images/WhatsApp Image 2025-03-08 at 16.01.48_515fd6e9.jpg" alt="Foto 3">
+          <a href="Images/WhatsApp Image 2025-03-08 at 16.01.48_515fd6e9.jpg" download class="download-btn">
+            <img src="images/123.png" alt="Download">
+          </a>
+        </div>
+        <div class="gallery-item">
+          <img src="Images/WhatsApp Image 2025-03-08 at 16.01.48_7bd8408b.jpg" alt="Foto 4">
+          <a href="Images/WhatsApp Image 2025-03-08 at 16.01.48_7bd8408b.jpg" download class="download-btn">
+            <img src="images/123.png" alt="Download">
+          </a>
+        </div>
+        <div class="gallery-item">
+          <img src="Images/WhatsApp Image 2025-03-08 at 16.01.48_a836604f.jpg" alt="Foto 5">
+          <a href="Images/WhatsApp Image 2025-03-08 at 16.01.48_a836604f.jpg" download class="download-btn">
+            <img src="images/123.png" alt="Download">
+          </a>
+        </div>
+        <div class="gallery-item">
+          <img src="Images/WhatsApp Image 2025-03-08 at 16.01.49_5faffb8e.jpg" alt="Foto 6">
+          <a href="Images/WhatsApp Image 2025-03-08 at 16.01.49_5faffb8e.jpg" download class="download-btn">
+            <img src="images/123.png" alt="Download">
+          </a>
+        </div>
+        <div class="gallery-item">
+          <img src="Images/WhatsApp Image 2025-03-08 at 16.20.23_bc2175c9.jpg" alt="Foto 7">
+          <a href="Images/WhatsApp Image 2025-03-08 at 16.20.23_bc2175c9.jpg" download class="download-btn">
+            <img src="images/123.png" alt="Download">
+          </a>
+        </div>
+        <div class="gallery-item">
+          <img src="Images/WhatsApp Image 2025-03-08 at 16.01.41_a14cf88d.jpg" alt="Foto 8">
+          <a href="Images/WhatsApp Image 2025-03-08 at 16.01.41_a14cf88d.jpg" download class="download-btn">
+            <img src="images/123.png" alt="Download">
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="theme.js"></script>
+  <script>
+    document.querySelectorAll(".gallery-grid img").forEach(img => {
+      img.addEventListener("click", () => {
+        const overlay = document.createElement("div");
+        overlay.style.position = "fixed";
+        overlay.style.top = 0;
+        overlay.style.left = 0;
+        overlay.style.width = "100vw";
+        overlay.style.height = "100vh";
+        overlay.style.backgroundColor = "rgba(0,0,0,0.8)";
+        overlay.style.display = "flex";
+        overlay.style.alignItems = "center";
+        overlay.style.justifyContent = "center";
+        overlay.style.zIndex = 9999;
+
+        const fullImg = document.createElement("img");
+        fullImg.src = img.src;
+        fullImg.alt = img.alt;
+        fullImg.style.maxWidth = "90vw";
+        fullImg.style.maxHeight = "90vh";
+        fullImg.style.borderRadius = "10px";
+        fullImg.style.boxShadow = "0 0 30px rgba(0,0,0,0.5)";
+
+        overlay.addEventListener("click", () => {
+          document.body.removeChild(overlay);
+        });
+
+        overlay.appendChild(fullImg);
+        document.body.appendChild(overlay);
+      });
+    });
+  </script>
 </body>
 </html>

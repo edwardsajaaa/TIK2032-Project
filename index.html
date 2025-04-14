@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Edward's Zone</title>
+    <link rel="stylesheet" href="index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>I'm Edward Benedict</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="main-header fade-in fade-delay-1">
+        <div class="container">
+            <button id="dark-mode-toggle" class="dark-toggle">🌙</button>
+                <div class="logo">
+                    <h1>Edward<span class="dot">.</span></h1>
+                <p class="tagline">Developer | Maker | Mahasiswa</p>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <h2>About Me</h2>
-        <p>Saya adalah mahasiswa semester 4 di Universitas Sam Ratulangi yang memiliki semangat tinggi dalam mengeksplorasi dan mengembangkan ilmu di bidang teknologi, pemrograman, dan pengembangan game.<p>
-        <p>Dengan ketertarikan yang kuat terhadap inovasi digital, saya terus belajar dan mengasah keterampilan untuk meningkatkan keahlian saya. Selain itu, saya juga aktif berkolaborasi dalam berbagai proyek serta diskusi yang memperluas wawasan dan memperkaya pengalaman akademik maupun profesional saya.</p>
+    
+    <main class="hero">
+        <div class="hero-image fade-in fade-delay-2">
+            <img src="Images/WhatsApp Image 2025-04-13 at 14.11.21_65230e36.jpg" alt="Foto Edward" />
+        </div>
+        <div class="hero-text fade-in fade-delay-3">
+            <p class="intro-role">Mahasiswa | Maker | Developer</p>
+            <h2>Hi, I'm Edward Benedict!</h2>
+            <p>
+                Saya merupakan mahasiswa semester 4 di Universitas Sam Ratulangi yang memiliki minat mendalam dalam bidang teknologi, pemrograman, dan pengembangan game. Saat ini, saya sedang aktif mengeksplorasi dunia digital, memperluas keterampilan teknis, serta berkolaborasi dalam berbagai proyek untuk menciptakan solusi kreatif dan inovatif yang berdampak positif.
+            </p>
+            <a href="gallery.html" class="cta-button fade-in fade-delay-4">Lihat Karya Saya</a>
+        </div>
     </main>
+    <script src="theme.js"></script>
 </body>
 </html>
