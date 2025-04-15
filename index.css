@@ -204,3 +204,22 @@ body.dark-mode .cta-button:hover {
 .dark-toggle:hover {
     transform: scale(1.1);
 }
+
+.clock {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    z-index: 1000;
+    color: #000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+body.dark-mode .clock {
+    background-color: rgba(30, 30, 30, 0.85);
+    color: #fff;
+}
